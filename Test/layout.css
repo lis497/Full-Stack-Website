@@ -1,0 +1,11 @@
+div {
+	background-color: orange;
+	height: 400px;
+	width: 300px;
+	padding: 20px;
+	border: 50px;
+	margin: 20px;
+	border-style: solid;
+	border-color: blue;
+
+}
