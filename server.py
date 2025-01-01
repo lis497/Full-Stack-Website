@@ -27,9 +27,10 @@ def helloworld():
 
 @app.route('/')
 def index():
+	pets = ["meow", "orange", "pink", "while", "black"]
 	catname = 'dog'
 	color = "green"
-	return render_template('index.html', catname = catname, htmlcolor=color)
+	return render_template('index.html', catname = catname, htmlcolor=color, pets = pets)
 
 @app.route("/newyear")
 def newyear():

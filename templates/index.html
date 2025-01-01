@@ -4,7 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>review</title>
-		
+		<style>
+			li {
+				font-size: 30px;
+				color: darkorange;
+			}
+		</style>
 
 	</head>
 
@@ -12,10 +17,11 @@
 		<h1>Hello {{catname}}</h1>
 		<h1>list</h1>
 		<ol>
-			<li>Cat</li>
-			<li>Dog</li>
-			<li>Rabbit</li>
+			{% for name in pets %}
+				<li>{{name}}</li>
+			{% endfor %}
 		</ol>
+
 
 		<h1>Form</h1>
 		<form >

@@ -10,7 +10,13 @@
 				padding: 70px;
 				margin-top: 200px;
 				color: green;
-				border: dotted 3px orange;
+				border: dotted 10px orange;
+			}
+			h1:hover {
+				border: dotted 10px red;
+				color: orange;
+				font-size: 60px;
+				background-color: lightblue;
 			}
 		</style>
 	</head>
@@ -18,7 +24,7 @@
 		{% if is_newyear %}
 			<h1>Yes, happy new year</h1>
 		{% else %}
-			<h1>New year is yet to come</h1>
+			<h1><span style="background-color: white;"><span style="color:red">New Year</span> is yet to come</span></h1>
 		{% endif %}
 	</body>
 </html>
