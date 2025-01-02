@@ -38,3 +38,9 @@ def newyear():
 	is_newyear = now.month == 1 and now.day == 1
 	
 	return render_template("newyear.html", is_newyear=is_newyear)
+
+@app.route("/list")
+def list():
+	pets = ["meow", "orange", "pink", "while", "black"]
+	return render_template("list.html", pets = pets)
+	

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	List
+{% endblock %}
+
+{% block body %}
+	<h1>list</h1>
+		<ol>
+			{% for name in pets %}
+				<li>{{name}}</li>
+			{% endfor %}
+		</ol>
+{% endblock %}
