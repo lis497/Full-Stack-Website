@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Form
+{% endblock %}
+
+{% block body %}
+	<form method="post" action="{{ url_for('profile') }}">
+
+		<input type="text" placeholder="Input your name" name="name">
+		<input type="password" placeholder="Input password" name="password">
+		<input type="date" name="date">
+		<input type="submit"> 
+	</form>
+{% endblock %}

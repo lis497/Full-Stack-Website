@@ -1,5 +1,5 @@
 import datetime
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 #print("this file name is", __name__)
 
 app = Flask(__name__)
@@ -43,4 +43,13 @@ def newyear():
 def list():
 	pets = ["meow", "orange", "pink", "while", "black"]
 	return render_template("list.html", pets = pets)
+
+@app.route("/form")
+def form():
+	return render_template("form.html")
+
+@app.route("/profile", methods=['post'])
+def profile():
+	print(request.form)
+	return render_template("profile.html")
 	
