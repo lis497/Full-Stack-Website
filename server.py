@@ -3,6 +3,7 @@ from flask import Flask,render_template,request
 #print("this file name is", __name__)
 
 app = Flask(__name__)
+todos = []
 
 @app.route('/<string:name>')
 def hello(name):
@@ -57,4 +58,13 @@ def profile():
 	date = request.form.get("date")
 
 	return render_template("profile.html", name = name, password = password, date = date)
+
+@app.route("/todo", methods=['post','get'])
+def todo():
+	
+	if request.method == 'POST':
+		print('it is post')
+		item = request.form.get("task")
+		todos.append(item)
+	return render_template("todo.html", todos = todos)
 	
