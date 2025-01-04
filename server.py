@@ -50,6 +50,11 @@ def form():
 
 @app.route("/profile", methods=['post'])
 def profile():
+	print(request.method)
 	print(request.form)
-	return render_template("profile.html")
+	name = request.form.get("name")
+	password = request.form.get("password")
+	date = request.form.get("date")
+
+	return render_template("profile.html", name = name, password = password, date = date)
 	
